@@ -18,9 +18,10 @@ public class BeamMovement : MonoBehaviour
         //if youre not david then ignore the previous comment ;)
         transform.Translate(Vector3.up * Time.deltaTime * speed, Space.World);
 
-        if(this.gameObject.transform.localPosition.y >= 10)
+        if(this.gameObject.transform.localPosition.y >= 0)
         {
             Destroy(this.gameObject);
+            ScoreManager.score ++;
         }
 
     }

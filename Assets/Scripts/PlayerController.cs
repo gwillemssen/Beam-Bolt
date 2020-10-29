@@ -31,6 +31,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //assign control to horizontalInput to move player up/down
+        verticalInput = Input.GetAxis("Vertical");
+        //assign control to the horizontalInput to move player left/right
+        horizontalInput = Input.GetAxis("Horizontal");
+
+        //move player up/down
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
+        //move player left/right
+        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+
         //check to make sure player stays inbounds
         if (transform.position.z > zTopBorder)
         {
@@ -52,15 +62,14 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRightBorder, transform.position.y, transform.position.z);
         }
 
+    }
 
-        //assign control to horizontalInput to move player up/down
-        verticalInput = Input.GetAxis("Vertical");
-        //assign control to the horizontalInput to move player left/right
-        horizontalInput = Input.GetAxis("Horizontal");
 
-        //move player up/down
-        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
-        //move player left/right
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "BeamBoy")
+        {
+            ScoreManager.ResetScore();
+        }
     }
 }
