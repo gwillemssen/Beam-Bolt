@@ -193,8 +193,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 156.32962, y: 26.405472, z: 23.78638}
-  m_Center: {x: 27.462112, y: -13.202731, z: -11.893163}
+  m_Size: {x: 156.32962, y: 19.575644, z: 23.78638}
+  m_Center: {x: 27.462112, y: -9.787816, z: -11.893163}
 --- !u!102 &297484592
 TextMesh:
   serializedVersion: 3
@@ -723,8 +723,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 177.6526, y: 31.643053, z: 29.880526}
-  m_Center: {x: 25.303154, y: -15.82153, z: -14.940251}
+  m_Size: {x: 177.6526, y: 22.592108, z: 29.880526}
+  m_Center: {x: 25.303154, y: -11.296057, z: -14.940251}
 --- !u!102 &1204564228
 TextMesh:
   serializedVersion: 3
