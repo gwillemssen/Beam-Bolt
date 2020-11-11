@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BeamMovement : MonoBehaviour
 {
-    public static float speed = 10.0f;
-    public static float maxSpeed = 70.0f;
+    public static float speed;
+    public static float startSpeed = 10.0f;
+    public static float maxSpeed = 90.0f;
 
     // Update is called once per frame
     void Update()
