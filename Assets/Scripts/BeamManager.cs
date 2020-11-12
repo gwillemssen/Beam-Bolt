@@ -15,7 +15,6 @@ public class BeamManager : MonoBehaviour
     private float baseSpawnTime = 3;
     private float spawnTime;
 
-    private float startingSpeed;
     private float timer;
     private float spawnHeight = -102;
     private float lastSpawnTime;
@@ -35,8 +34,8 @@ public class BeamManager : MonoBehaviour
         timer = 0;
         lastSpawnTime = 0;
         spawnTime = baseSpawnTime;
-        startingSpeed = BeamMovement.speed; //bee movie . speed
         state = difficultyState.easy;
+        BeamMovement.speed = BeamMovement.startSpeed;
     }
 
     // Update is called once per frame
@@ -49,7 +48,7 @@ public class BeamManager : MonoBehaviour
             BeamMovement.speed += Time.deltaTime / 2;
         }
         //increasing the spawn rate every frame as well
-        spawnTime = baseSpawnTime / (BeamMovement.speed / startingSpeed);
+        spawnTime = baseSpawnTime / (BeamMovement.speed / BeamMovement.startSpeed);
 
         //spawn layer of beams
         if (timer >= lastSpawnTime + spawnTime)

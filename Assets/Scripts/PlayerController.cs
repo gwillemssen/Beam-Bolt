@@ -70,9 +70,9 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "BeamBoy")
         {
+            ScoreManager.ResetScore();
             SceneManager.LoadScene("GameOver");
             Debug.Log("loaded");
-            ScoreManager.ResetScore();
         }
     }
 }
