@@ -15,6 +15,7 @@ public class MainMenuController : MonoBehaviour
         {
             //Load the main game scene (SampleScene) if "Start" is clicked
             SceneManager.LoadScene("SampleScene");
+            ScoreManager.ResetScore();
             Debug.Log("Scene Loaded!");
         }
         if (isExit)
